@@ -1,0 +1,8 @@
+# Instalação swagger-ui-express
+yarn add swagger-ui-express
+
+# Instalação
+yarn add @types/swagger-ui-express -D
+
+# Para o arquivo swagger.json
+"resolveJsonModule": true
