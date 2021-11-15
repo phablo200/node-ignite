@@ -5,10 +5,8 @@ class ImportCategoryController {
 
   handle(request: Request, response: Response) {
     const { file } = request;
-
     container.resolve(ImportCategoryUseCase).execute(file);
-
-    return response.send();
+    return response.status(201).send();
   }
 }
 

@@ -5,7 +5,6 @@ import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 class CreateCategoryController {
 
   async handle(request: Request, response: Response): Promise<Response> {
-      console.log('passando aqui...');
     const { name, description } = request.body;
     
     const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
