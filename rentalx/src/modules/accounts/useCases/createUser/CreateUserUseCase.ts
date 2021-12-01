@@ -19,11 +19,12 @@ class CreateUserUseCase {
         }
 
         const passwordHash = await hash(formData.password, 8);
-        Object.assign(formData, {
+        const user = {
+            ...formData,
             password: passwordHash
-        });
-
-        await this.userRepository.create(formData);
+        };
+        
+        await this.userRepository.create(user);
     }
 };
 
